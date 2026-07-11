@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservation — LUST Lounge &amp; Bar</title>
+<link rel="stylesheet" href="BARCSS.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M8 6h16l-6.5 9v9M12.5 24h7" stroke="#F3E9DC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="rim flicker" cx="16" cy="6" r="9" stroke="#C9A24B" stroke-width="1" opacity="0.6"/>
+      </svg>
+      LUST<small>LOUNGE &amp; BAR</small>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="LUST_MENU.html">Menu</a></li>
+        <li><a href="LUST_REVIEWS.html">Reviews</a></li>
+        <li><a href="LUST_FAQS.html">FAQs</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="LUST_RESERVATION.html" class="btn btn-gold">Reserve a Table</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- reservation -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Book Ahead</span>
+      <h1>Reserve a Table</h1>
+      <p>Book your table and enjoy an unforgettable night with us.</p>
+      <button type="button" class="btn btn-ghost" id="open-floorplan-modal" style="margin-top:20px">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;margin-right:8px;vertical-align:-3px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        View Floor Plan
+      </button>
+    </div>
+  </section>
+
+  <section class="section reveal" style="padding-top:0">
+    <div class="wrap">
+      <div class="reserve-grid">
+
+        <div class="card">
+          <h2>Reservation Form</h2>
+          <form id="reservation-form" novalidate>
+
+            <div class="field" data-required>
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+              <p class="error-msg">This field is required.</p>
+            </div>
+
+            <div class="field" data-required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+              <p class="error-msg">This field is required.</p>
+            </div>
+
+            <div class="field" data-required>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="09XXXXXXXXX">
+              <p class="error-msg">This field is required.</p>
+            </div>
+
+            <div class="field" data-required>
+              <label for="branch">Branch</label>
+              <select id="branch" name="branch">
+                <option value="" selected disabled>Select a branch</option>
+                <option>Makati City (Flagship)</option>
+                <option>Quezon City</option>
+                <option>Taguig — BGC</option>
+                <option>Mandaluyong</option>
+              </select>
+              <p class="error-msg">Please select a branch.</p>
+            </div>
+
+            <div class="field-row">
+              <div class="field" data-required>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+                <p class="error-msg">Please select a date.</p>
+              </div>
+              <div class="field" data-required>
+                <label for="time">Time</label>
+                <select id="time" name="time">
+                  <option value="" selected disabled>Select time</option>
+                  <option>5:00 PM</option>
+                  <option>6:00 PM</option>
+                  <option>7:00 PM</option>
+                  <option>8:00 PM</option>
+                  <option>9:00 PM</option>
+                  <option>10:00 PM</option>
+                  <option>11:00 PM</option>
+                </select>
+                <p class="error-msg">Please select a time.</p>
+              </div>
+            </div>
+
+            <div class="field" data-required>
+              <label for="guests">Guests</label>
+              <select id="guests" name="guests">
+                <option value="" selected disabled>Select number of guests</option>
+                <option>1–2 guests</option>
+                <option>3–4 guests</option>
+                <option>5–6 guests</option>
+                <option>7–9 guests</option>
+                <option>10+ guests (contact us directly)</option>
+              </select>
+              <p class="error-msg">Please select your party size.</p>
+            </div>
+
+            <div class="field" data-required id="table-field">
+              <label>Select Your Table</label>
+              <p class="table-select-hint" id="table-select-hint">Pick your preferred table below. We'll check real availability and confirm by email.</p>
+              <div class="table-grid" id="table-grid"></div>
+              <input type="hidden" id="table" name="table">
+              <p class="error-msg">Please select an available table.</p>
+            </div>
+
+            <div class="field">
+              <label for="request">Special Request (Optional)</label>
+              <textarea id="request" name="request" placeholder="Any special request?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-block">Confirm Reservation</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="card">
+            <h2>Important Notes</h2>
+            <ul class="notes-list">
+              <li>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                <p><strong>Grace period</strong>Reservations are held for 15 minutes past the reservation time.</p>
+              </li>
+              <li>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><circle cx="17" cy="8" r="3"/></svg></div>
+                <p><strong>Large groups</strong>For groups of 10 or more, please contact us directly.</p>
+              </li>
+              <li>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-4.5 7-11a7 7 0 0 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+                <p><strong>Cancellations</strong>Cancellation must be made at least 2 hours in advance.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Contact Us</h2>
+            <div class="contact-list">
+              <a href="tel:+639123456789">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6A2 2 0 0 1 22 16.9z"/></svg>
+                +63 912 345 6789 (Makati)
+              </a>
+              <a href="mailto:info@lustlounge.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+                info@lustlounge.com
+              </a>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-4.5 7-11a7 7 0 0 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                Makati · Quezon City · Taguig · Mandaluyong
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- floor plan modal -->
+  <div class="calendar-modal floorplan-modal" id="floorplan-modal" aria-hidden="true">
+    <div class="calendar-modal-overlay" data-close-floorplan></div>
+    <div class="calendar-modal-panel floorplan-panel" role="dialog" aria-modal="true" aria-label="LUST Lounge floor plan">
+      <div class="calendar-modal-head">
+        <h3>Floor Plan</h3>
+        <button type="button" class="calendar-close" data-close-floorplan aria-label="Close floor plan">&times;</button>
+      </div>
+      <img src="LUST_BAR_LAYOUT.png" alt="LUST Lounge &amp; Bar floor plan showing VIP areas, dance floor, DJ booth, cocktail and high tables, bar, and walk-in seating" class="floorplan-img" loading="lazy">
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+            <path d="M8 6h16l-6.5 9v9M12.5 24h7" stroke="#F3E9DC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="6" r="9" stroke="#C9A24B" stroke-width="1" opacity="0.6"/>
+          </svg>
+          LUST<small>LOUNGE &amp; BAR</small>
+        </a>
+        <p>Good drinks. Good vibes. Great nights.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="LUST_MENU.html">Menu</a></li>
+          <li><a href="LUST_RESERVATION.html">Reservation</a></li>
+          <li><a href="LUST_REVIEWS.html">Reviews</a></li>
+      <li><a href="LUST_FAQS.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><p>Mon – Thu · 5:00 PM – 1:00 AM</p></li>
+          <li><p>Fri – Sat · 5:00 PM – 2:00 AM</p></li>
+          <li><p>Sunday · 5:00 PM – 12:00 AM</p></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3c0 3 2 5 5 5"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 LUST Lounge &amp; Bar. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="BARJS.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — LUST Lounge &amp; Bar</title>
+<link rel="stylesheet" href="BARCSS.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M8 6h16l-6.5 9v9M12.5 24h7" stroke="#F3E9DC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="rim flicker" cx="16" cy="6" r="9" stroke="#C9A24B" stroke-width="1" opacity="0.6"/>
+      </svg>
+      LUST<small>LOUNGE &amp; BAR</small>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="LUST_MENU.html">Menu</a></li>
+        <li><a href="LUST_REVIEWS.html">Reviews</a></li>
+        <li><a href="LUST_FAQS.html">FAQs</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="LUST_RESERVATION.html" class="btn btn-gold">Reserve a Table</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- menu -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">On the Menu</span>
+      <h1>Our Menu</h1>
+      <p>A curated selection of cocktails, spirits, wines, beers, Filipino classics, and bar bites.</p>
+    </div>
+  </section>
+
+  <section class="section reveal" style="padding-top:0">
+    <div class="wrap">
+
+      <div class="tab-row" role="tablist">
+        <button class="tab-btn is-active" data-tab="cocktails" role="tab" aria-selected="true">Cocktails</button>
+        <button class="tab-btn" data-tab="filipino" role="tab" aria-selected="false">Filipino Classics</button>
+        <button class="tab-btn" data-tab="spirits" role="tab" aria-selected="false">Spirits</button>
+        <button class="tab-btn" data-tab="wines" role="tab" aria-selected="false">Wines</button>
+        <button class="tab-btn" data-tab="beers" role="tab" aria-selected="false">Beers</button>
+        <button class="tab-btn" data-tab="bites" role="tab" aria-selected="false">Bar Bites</button>
+      </div>
+
+      <!-- cocktails -->
+<div class="menu-panel is-active" id="cocktails">
+  <div class="menu-list">
+    <div class="menu-item"><div class="glass"><img src="lust_signature.webp" alt=""></div><div class="info"><h3>Lust Signature</h3><p>Vodka, passion fruit, lime, simple syrup</p></div><div class="price">₱420</div></div>
+    <div class="menu-item"><div class="glass"><img src="smoked_old_fashioned.webp" alt=""></div><div class="info"><h3>Smoked Old Fashioned</h3><p>Bourbon, smoked bitters, brown sugar</p></div><div class="price">₱400</div></div>
+    <div class="menu-item"><div class="glass"><img src="berry_bliss.webp" alt=""></div><div class="info"><h3>Berry Bliss</h3><p>Gin, mixed berries, lemon, soda</p></div><div class="price">₱380</div></div>
+    <div class="menu-item"><div class="glass"><img src="moscow_mule.jpg" alt=""></div><div class="info"><h3>Moscow Mule</h3><p>Vodka, lime, ginger beer</p></div><div class="price">₱360</div></div>
+    <div class="menu-item"><div class="glass"><img src="espresso martini.jpg" alt=""></div><div class="info"><h3>Espresso Martini</h3><p>Vodka, espresso, coffee liqueur</p></div><div class="price">₱420</div></div>
+  </div>
+</div>
+
+<!-- filipino classics -->
+<div class="menu-panel" id="filipino">
+<div class="menu-list">
+<div class="menu-item"><div class="glass"><img src="lambanog_sour.webp" alt=""></div><div class="info"><h3>Lambanog Sour</h3><p>Lambanog, calamansi, egg white</p></div><div class="price">₱380</div></div>
+<div class="menu-item"><div class="glass"><img src="manila_mule.webp" alt=""></div><div class="info"><h3>Manila Mule</h3><p>Lambanog, ginger beer, calamansi</p></div><div class="price">₱360</div></div>
+<div class="menu-item"><div class="glass"><img src="tanduay_rhum_special.jpg" alt=""></div><div class="info"><h3>Tanduay Rhum Coke</h3><p>Tanduay rhum, cola, calamansi</p></div><div class="price">₱220</div></div>
+<div class="menu-item"><div class="glass"><img src="ginebra_fizz.webp" alt=""></div><div class="info"><h3>Ginebra Fizz</h3><p>Ginebra San Miguel gin, calamansi, soda</p></div><div class="price">₱240</div></div>
+<div class="menu-item"><div class="glass"><img src="basi_sangria.webp" alt=""></div><div class="info"><h3>Basi Sangria</h3><p>Basi, tropical fruit, brandy</p></div><div class="price">₱340</div></div>
+</div>
+</div>
+
+<!-- spirits -->
+<div class="menu-panel" id="spirits">
+<div class="menu-list">
+<div class="menu-item"><div class="glass"><img src="single_malt_whiskt.jpg" alt=""></div><div class="info"><h3>Single Malt Whisky</h3><p>Neat or on the rocks</p></div><div class="price">₱320</div></div>
+<div class="menu-item"><div class="glass"><img src="premium_vodka.jpg" alt=""></div><div class="info"><h3>Premium Vodka</h3><p>Chilled shot</p></div><div class="price">₱240</div></div>
+<div class="menu-item"><div class="glass"><img src="london_dry_gin.jpg" alt=""></div><div class="info"><h3>London Dry Gin</h3><p>Neat or with tonic</p></div><div class="price">₱260</div></div>
+<div class="menu-item"><div class="glass"><img src="aged_rum.jpg" alt=""></div><div class="info"><h3>Aged Rum</h3><p>Neat or with cola</p></div><div class="price">₱280</div></div>
+<div class="menu-item"><div class="glass"><img src="blanco_tequila.jpg" alt=""></div><div class="info"><h3>Blanco Tequila</h3><p>Shot with salt & lime</p></div><div class="price">₱220</div></div>
+</div>
+</div>
+
+<!-- wines -->
+      <div class="menu-panel" id="wines">
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="glass"><img src="house_red.jpg" alt="House Red" loading="lazy"></div>
+            <div class="info"><h3>House Red</h3><p>Glass · Cabernet Sauvignon blend</p></div>
+            <div class="price">₱280</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="house_white.jpg" alt="House White" loading="lazy"></div>
+            <div class="info"><h3>House White</h3><p>Glass · Sauvignon Blanc</p></div>
+            <div class="price">₱280</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="rose.jpg" alt="Rosé" loading="lazy"></div>
+            <div class="info"><h3>Rosé</h3><p>Glass · Provence-style dry rosé</p></div>
+            <div class="price">₱300</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="prosecco.jpg" alt="Prosecco" loading="lazy"></div>
+            <div class="info"><h3>Prosecco</h3><p>Bottle · Sparkling, chilled</p></div>
+            <div class="price">₱1,200</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- beers -->
+      <div class="menu-panel" id="beers">
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="glass"><img src="sanmig_light.jpg" alt="San Miguel Light" loading="lazy"></div>
+            <div class="info"><h3>San Miguel Light</h3><p>Bottle, 330ml</p></div>
+            <div class="price">₱120</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="sanmig_palepilsen.jpg" alt="San Miguel Pale Pilsen" loading="lazy"></div>
+            <div class="info"><h3>San Miguel Pale Pilsen</h3><p>Bottle, 330ml</p></div>
+            <div class="price">₱110</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="red_horse.jpg" alt="Red Horse" loading="lazy"></div>
+            <div class="info"><h3>Red Horse</h3><p>Bottle, 330ml</p></div>
+            <div class="price">₱130</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="sanmig_apple.jpg" alt="San Mig Apple" loading="lazy"></div>
+            <div class="info"><h3>San Mig Apple</h3><p>Bottle, 330ml</p></div>
+            <div class="price">₱120</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="corona.jpg" alt="Corona" loading="lazy"></div>
+            <div class="info"><h3>Corona</h3><p>Bottle with lime, 330ml</p></div>
+            <div class="price">₱150</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="heineken.jpg" alt="Heineken" loading="lazy"></div>
+            <div class="info"><h3>Heineken</h3><p>Bottle, 330ml</p></div>
+            <div class="price">₱150</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bar bites -->
+      <div class="menu-panel" id="bites">
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="glass"><img src="loaded_nachos.jpg" alt="Loaded Nachos" loading="lazy"></div>
+            <div class="info"><h3>Loaded Nachos</h3><p>Cheese sauce, salsa, jalapeños, sour cream</p></div>
+            <div class="price">₱280</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="beef_sliders.jpg" alt="Beef Sliders" loading="lazy"></div>
+            <div class="info"><h3>Beef Sliders</h3><p>Trio, house sauce, brioche bun</p></div>
+            <div class="price">₱340</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="crispy_calamari.jpg" alt="Crispy Calamari" loading="lazy"></div>
+            <div class="info"><h3>Crispy Calamari</h3><p>Squid rings, aioli dip</p></div>
+            <div class="price">₱300</div>
+          </div>
+          <div class="menu-item">
+            <div class="glass"><img src="truffle_fries.jpg" alt="Truffle Fries" loading="lazy"></div>
+            <div class="info"><h3>Truffle Fries</h3><p>Parmesan, truffle oil, herbs</p></div>
+            <div class="price">₱220</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+            <path d="M8 6h16l-6.5 9v9M12.5 24h7" stroke="#F3E9DC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="6" r="9" stroke="#C9A24B" stroke-width="1" opacity="0.6"/>
+          </svg>
+          LUST<small>LOUNGE &amp; BAR</small>
+        </a>
+        <p>Good drinks. Good vibes. Great nights.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="LUST_MENU.html">Menu</a></li>
+          <li><a href="LUST_RESERVATION.html">Reservation</a></li>
+          <li><a href="LUST_REVIEWS.html">Reviews</a></li>
+      <li><a href="LUST_FAQS.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><p>Mon – Thu · 5:00 PM – 1:00 AM</p></li>
+          <li><p>Fri – Sat · 5:00 PM – 2:00 AM</p></li>
+          <li><p>Sunday · 5:00 PM – 12:00 AM</p></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3c0 3 2 5 5 5"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 LUST Lounge &amp; Bar. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="BARJS.js"></script>
+</body>
+</html>
